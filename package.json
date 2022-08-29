@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "lodash.debounce": "^4.0.8",
+    "mongo": "^0.1.0",
+    "mongodb": "^4.9.0",
     "next": "12.2.5",
+    "next-auth": "^4.10.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.54.5"
   },
   "devDependencies": {
     "eslint": "8.22.0",

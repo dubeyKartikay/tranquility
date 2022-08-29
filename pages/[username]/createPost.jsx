@@ -1,0 +1,1 @@
+// User can create and share new posts here
