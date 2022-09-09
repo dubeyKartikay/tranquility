@@ -1,0 +1,46 @@
+.TranquilityButtonFilled{
+    
+background: linear-gradient(90deg, #E38748 3.47%, #E8630A 49.31%, #AD4500 100%);
+border-radius: 10px;
+font: inherit;
+span{
+  font: inherit;
+
+}
+// width: 100%;
+padding: 0 10px;
+border: none;
+font-size: inherit;
+min-width: 32px;
+min-height: 32px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+
+}
+.TranquilityButtonOutline{
+  font: inherit;
+    padding: 10px;
+    // width: 100%;
+    border: none;
+    min-width: 32px;
+    min-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-radius: 10px;
+    border-image-source: linear-gradient(90deg, #E38748 3.47%, #E8630A 49.31%, #AD4500 100%);
+    span {
+      font-weight: inherit;
+
+        background: -webkit-linear-gradient(90deg, #E38748 3.47%, #E8630A 49.31%, #AD4500 100%);
+        -webkit-background-clip: text;
+        background-clip : text;
+        -webkit-text-fill-color: transparent;
+      }
+}

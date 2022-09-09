@@ -1,0 +1,114 @@
+@import "../../styles/variables.module.scss";
+.parent{
+    display: flex;
+    padding: 0 1rem 3rem 1rem;
+    max-height: fit-content;
+    @media screen and (max-width:$screen--small) {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+        padding: 1rem;
+    }
+}
+.image{
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+    .img{
+        width: 100%;
+        height: fit-content;
+        min-width: 400px;
+        border-radius: 25px;
+        // border: 1px solid #d9d9d9;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+         top :-20px !important;
+        left: 20px !important;
+        @media screen and (max-width:$screen--small) {
+            width:100%;
+            min-width: 00px;
+        }
+        z-index: 1;
+        object-fit: contain;    
+        
+    }
+    .imgBg{
+        min-width: 400px;
+        object-fit: contain;    
+        width: 100%;
+        height: fit-content;
+        display: block;
+        margin: 0 auto;
+        @media screen and (max-width:$screen--small) {
+            width: 100%;
+            min-width: 00px;
+            // top :calc(50% + 10px) !important;
+            // left: calc(50% - 10px)  !important;
+            // transform: translate(-50%,-50%);
+        }
+        height: 100%;
+        // position: absolute;
+        // top :20px !important;
+        // left: -20px !important;
+        z-index: -1;
+
+    }
+    
+}
+.date{
+    font-size: 14px;
+    opacity: 0.3;   
+    display: block;
+    transform: translateY(-20px);
+}
+.heading{
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+}
+.cotentParent{
+padding:  0 3rem;
+    
+}
+.subtext{
+    display: block;
+    font-size: 18px;
+    opacity: 0.5;
+    padding: 2rem 0;
+}
+.timeText{
+    display: inline;
+    padding: 0 10px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+.timeimg{
+
+}
+.timeParent{
+display: flex;
+justify-content: space-between;
+}
+.writerPic{
+    width: 28px;
+    height: 28px;
+    margin: 0 10px ;
+}
+@media screen and (max-width:$screen--m-small) {
+    .heading{
+        padding-top: 1rem;
+        font-size: 28px ;
+        line-height: 2rem;
+    }
+    .subtext{
+        font-size: 14px;
+    }
+    .timeParent{
+        font-size: 12px;
+    }
+}

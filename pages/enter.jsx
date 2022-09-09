@@ -1,8 +1,10 @@
 import { useState,useCallback,useEffect, useRef } from "react";
 import debounce from "lodash.debounce";
 import Loader from "../components/Loader/Loader.component";
-import { loginUser,createNewUser } from "../lib/auth";
-import {signIn} from "next-auth/react"
+import {signIn} from "next-auth/react";
+import styles from "../styles/Enter.module.scss";
+import TranquilityButton from "../components/TranquilityButton/TranquilityButton.component";
+import Router from "next/router";
 export default function Enter() {
     const [isLogin,setisLogin]  = useState(true);
     const [username,setUsername]  = useState("");
@@ -46,6 +48,12 @@ export default function Enter() {
     
         } else {
             setIsLoading([false, "signed in"]);
+            if (window.history.length > 1 && document.referrer.indexOf(window.location.host) !== -1) {
+                Router.back();
+              } else {
+                Router.replace("/");
+              }
+
     
         }
         return;
@@ -85,34 +93,44 @@ export default function Enter() {
         
     }
   return (
-    <div>
-        <Loader show={isLoading[0]}/>
-        <form onSubmit={handleSubmit}>
-           { isLogin &&(<>
-            <label htmlFor="username">username/Email </label>
-            <input type="text" name="username" id="username" ref={emailRef} />
-            <br />
-            <label htmlFor="password">Password</label>
-            <input type="text" name="password" id="password" ref={passwordRef} />
-            <button disabled = {isLoading[0]} type="submit">Submit</button>
-            </>)
-            }
-            {!isLogin && (
-            <>
-             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" ref={emailRef} />
-            <br />
-            <label htmlFor="create-username"> Create username</label>
-            <input type="text" name="create-username" id="create-username"  onChange = {handleUsernameChange} value ={username} />
-            <br />
-            <p>{isLoading[1]}</p>
-            <label htmlFor="create-password">Create password</label>
-            <input type="text" name="create-password" id="create-password"  ref={passwordRef} />
-            <button type="submit" disabled = {isLoading[0]}>Submit</button>
-            </>)}
-            <br />
-            <button onClick={(event)=>{event.preventDefault();setisLogin(!isLogin)}}>{isLogin ?  "Don't have an acccount ?":"Login"}</button>
-        </form>
+    <div className={styles.container}>
+        <div className={styles.parent}>
+            <Loader show={isLoading[0]}/>
+            <form onSubmit={handleSubmit}>
+               { isLogin &&(<>
+                <label htmlFor="username">username or Email </label>
+                <br />
+                <input type="text" name="username" id="username" ref={emailRef} />
+                <br />
+                <br />
+                <label htmlFor="password">Password</label>
+                <br />
+                <input type="password" name="password" id="password" ref={passwordRef} />
+                <TranquilityButton className={styles.submitButton} disabled = {isLoading[0]} type="submit">Submit</TranquilityButton>
+                </>)
+                }
+                {!isLogin && (
+                <>
+                 <label htmlFor="email">Email</label>
+                 <br />
+                <input type="text" name="email" id="email" ref={emailRef} />
+                <br />
+                <br />
+                <label htmlFor="create-username"> Create username</label>
+                <br />
+                <input type="text" name="create-username" id="create-username"  onChange = {handleUsernameChange} value ={username} />
+                <br />
+                <br />
+                <p>{isLoading[1]}</p>
+                <label htmlFor="create-password">Create password</label>
+                <br />
+                <input type="password" name="create-password" id="create-password"  ref={passwordRef} />
+                <TranquilityButton className={styles.submitButton} type="submit" disabled = {isLoading[0]}>Submit</TranquilityButton>
+                </>)}
+                <br />
+                <TranquilityButton className={styles.button} btnStyle="outline" onClick={(event)=>{event.preventDefault();setisLogin(!isLogin)}}>{isLogin ?  "Don't have an acccount? Sign up":"Already have an account? Login"}</TranquilityButton>
+            </form>
+        </div>
     </div>
   )
 }

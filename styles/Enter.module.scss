@@ -1,0 +1,35 @@
+.parent{
+    background-color: #282a35;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    *{
+        color: white;
+    }
+    input{
+        background: #1e1e1e;
+        border: none;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+    }
+}
+.container{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submitButton{
+    margin: 10px 0 0 auto;
+    padding: 0.5rem 1rem;
+    
+        font-weight: 300;
+    
+    font-size: 18px;
+}
+.button{
+    font-weight: 700;
+    width: 100%;
+}
