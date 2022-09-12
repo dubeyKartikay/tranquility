@@ -47,13 +47,13 @@ export default function Navbar() {
                 <ul ref={slideInmenuRef} className={styles.parentContainer}>
                     <li className={styles.navPages}>
                         <Link href="/">
-                            <a href="">home</a>
+                            <a onClick={makeActiondropDownVanish} href="">home</a>
                         </Link>
                     </li>
                     <li className={styles.navPages}>
-                        <div>About</div>
-                        <div>Contact</div>
-                        <div>Search</div>
+                        <div onClick={makeActiondropDownVanish}>About</div>
+                        <div onClick={makeActiondropDownVanish}>Contact</div>
+                        <div onClick={makeActiondropDownVanish}>Search</div>
                     </li>
                     <li></li>
                 </ul>

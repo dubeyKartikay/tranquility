@@ -1,0 +1,19 @@
+@import "../../styles/variables.module.scss";
+.nav{
+    position: sticky;
+    position: -webkit-sticky; /* For Safari */
+    top: 100px; /* How far down the page you want your ToC to live */
+  
+    /* Give table of contents a scrollbar */
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    @media screen and (max-width:$screen--small) {
+        display: none;
+    }
+}
+.child{
+    padding-left: 1rem;
+}
+.active{
+    color: $primary-color;
+}

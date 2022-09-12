@@ -1,0 +1,140 @@
+@import "../../styles/variables.module.scss";
+.contentDiv{
+    width: 100%;
+    max-width: 1200px;
+    padding: 5%;
+    // background: #d9d9d9s;
+    a{
+        color: $primary-color;
+        transition: all 0.5s;
+    }
+    a:hover{
+        color: #d9d9d9;
+
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+        padding: 1rem;
+        border-radius: 25px;
+    }
+    table{
+        width: 100%;
+        font-weight: 300;
+        @media screen and (max-width:$screen--small) {
+            font-size: 14px;
+        }
+        thead{
+            th{
+                
+                border-right: 1px solid #d9d9d9;
+                border-left: 1px solid #d9d9d9;
+                border-bottom: 1px solid #d9d9d9;
+                border-radius: 5px;
+            }
+        }
+        tbody{
+            td{
+                
+                // border-left: 3px solid #d9d9d9;
+                border-right: 1px solid #d9d9d9;
+                padding: 1rem;
+                // border-radius: 5px;
+            }
+
+        }
+        tr{
+            height: 2rem;
+        }
+    }
+    li{
+        font-weight: 300;
+        margin-left: 1rem;
+        font-weight: 300;
+        font-size: 20px;
+    }
+    h1{
+        font-size: 80px;
+        @media screen and (max-width:$screen--small) {
+            font-size: 40px;
+        }
+    }
+
+    h2{
+        font-size: 36px;
+        font-weight: 700;
+        padding-top: 3rem;
+        @media screen and (max-width:$screen--small) {
+            font-size: 28px;
+        }
+    }
+    h3{
+        padding-top: 2rem;
+        font-size: 24px;
+        font-weight: 700;
+        @media screen and (max-width:$screen--small) {
+            font-size: 20px;
+        }
+
+    }
+    h4{
+        padding-top: 1rem;
+        @media screen and (max-width:$screen--small) {
+        }
+        // font-size: 24px;
+        // font-weight: 700;
+
+    }
+    hr{
+        border: 1px solid #d9d9d9;
+        background: #d9d9d9;
+        margin-bottom: 1rem;
+    }
+    blockquote {    
+        font-weight: 200;
+        color: rgba(217, 217, 217, 0.463)    ;
+        margin: 0;
+        padding-left: 1em;
+        border-left: 3px #d9d9d9 solid;
+        @media screen and (max-width:$screen--small) {
+            font-size: 14px;
+        }
+    }
+    p{
+        font-weight: 300;
+        font-size: 20px;
+        @media screen and (max-width:$screen--small) {
+            font-size: 14px;
+        }
+    }
+
+    code{
+        padding: 3px 10px;
+       
+        background: #292c33;
+        border-radius: 10px;
+        font: ui-monospace;
+        font-size: 16px;
+        color: hsl(265, 89%, 90%);
+        @media screen and (max-width:$screen--small) {
+            font-size: 14px;
+        }
+    }
+    pre{
+        background: #292c33;
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 1rem 0;
+        @media screen and (max-width:$screen--small) {
+            padding: 0.5rem ;
+        }
+        div{
+
+            padding: 0 !important;
+        }
+        code{
+            padding: 0;
+            border-radius: 0;
+        }
+    }
+}

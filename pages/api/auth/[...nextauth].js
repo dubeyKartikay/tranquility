@@ -19,7 +19,7 @@ export default NextAuth(
         if (result === true) {
           client.close();
           const user = {"email":userData.email,"name":userData.username};
-          console.log(user);
+          // console.log(user);
           return user;
         }else{
           client.close()

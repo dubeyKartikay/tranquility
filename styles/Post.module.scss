@@ -1,0 +1,47 @@
+@import "../styles/variables.module.scss";
+.heading{
+    font-weight: 600;
+    font-size: 80px;
+    @media screen and (max-width:$screen--small) {
+        font-size: 40px;
+    }
+}
+.subtext{
+    padding: 2rem 0;
+    font-weight: 300;
+    font-size: 20px;
+    opacity: 0.7;
+    letter-spacing: 0.3px;
+    @media screen and (max-width:$screen--small) {
+        font-size: 14px;
+    }
+}
+.headingContainer{
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 1016px;
+}
+.headingContainerContainer{
+    display: flex;
+    justify-content: center;
+}
+.contentContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 10%;
+    color: #d9d9d9;
+    @media screen and (max-width:$screen--small) {
+        padding: 0 1rem;
+    }
+
+    .tableOfcontents
+    {
+        width: 350px;
+        background: #24252c;
+        padding: 2rem;
+        border-radius: 25px;
+        @media screen and (max-width:$screen--small) {
+            display: none;
+        }
+    }
+}

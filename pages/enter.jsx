@@ -41,7 +41,7 @@ export default function Enter() {
             identifier: emailRef.current.value,
             password: passwordRef.current.value
         });
-        console.log(result);
+        // console.log(result);
         const { error } = result;
         if (error) {
             setIsLoading([false, "Failed to sign in"]);
@@ -65,7 +65,7 @@ export default function Enter() {
         }
         const res = await fetch("/api/utils/unique",{method:"POST",body:JSON.stringify({username}) ,headers:{"content-type":"application/json"}})
         const {message} = await res.json();
-        console.log(message);
+        // console.log(message);
         if (message === "true") {
             setIsLoading([false,"Acceptable"])
         }else{

@@ -16,7 +16,7 @@ export default function Subscribe() {
   
         })
         setIsLoading(false)
-        console.log(res);
+        // console.log(res);
     }
   return (
     <div style={{"width":"100%","maxWidth":"1200px"}}>

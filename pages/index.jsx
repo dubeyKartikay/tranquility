@@ -57,8 +57,8 @@ export default function Home() {
           // navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('slide change')}
         >
           <SwiperSlide> <NormalBlog
             heading="Dear UI Designer, yok bisa yok belajar bikin copy sendiri"
@@ -136,8 +136,8 @@ export default function Home() {
           // navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log('slide change')}
         >
           <SwiperSlide> <NormalBlog
             heading="Dear UI Designer, yok bisa yok belajar bikin copy sendiri"
@@ -193,9 +193,6 @@ export default function Home() {
 
         </div>}
       </Section>
-      <Footer>
-      <SocialMedia/>
-      </Footer>
     </div>
   )
 }

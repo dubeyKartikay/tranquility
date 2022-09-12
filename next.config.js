@@ -8,8 +8,15 @@ const nextConfig = {
   },
   experimental: { images: { allowFutureImage: true } },
   images: {
-    domains: ['images.unsplash.com','cdn-icons-png.flaticon.com'],
-},
+    domains: ['images.unsplash.com', 'cdn-icons-png.flaticon.com'],
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader',
+    });
+    return config;
+  },
 }
 
 module.exports = nextConfig

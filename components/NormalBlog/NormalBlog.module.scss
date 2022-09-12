@@ -56,11 +56,6 @@
 
 }
 
-.date {
-    font-size: 14px;
-    opacity: 0.3;
-    display: block;
-}
 
 .heading {
     display: block;
@@ -80,26 +75,10 @@
     padding: 2rem 0;
 }
 
-.timeText {
-    display: inline;
-    padding: 0 10px;
-    font-size: 14px;
-    opacity: 0.5;
-}
 
-.timeimg {}
 
-.timeParent {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-}
 
-.writerPic {
-    width: 28px;
-    height: 28px;
-    margin: 0 10px;
-}
+
 @media screen and (max-width:$screen--m-small) {
     .heading{
         padding :8px 0;
