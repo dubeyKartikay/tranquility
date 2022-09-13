@@ -1,4 +1,3 @@
-import Head from 'next/head'
 // import Image from 'next/image'
 import styles from "../styles/Home.module.scss"
 import Loader from '../components/Loader/Loader.component'
@@ -10,14 +9,14 @@ import Image from 'next/future/image'
 import { useState, useEffect } from 'react'
 import scssVars from "../styles/variables.module.scss"
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Section from '../components/Section/Section.component'
 import trendingIcon from "../public/trending.svg"
 import myPicksIcon from "../public/myPicks.svg"
 import backgroundBlogPostImgOrange from "../public/backgroundBlogPostImgOrange.svg"
-import Footer from '../components/Footer/Footer.component'
-import SocialMedia from "../components/SocialMedia/SocialMedia.component"
+import FeaturedBlogWrapper from "../components/FeaturedBlogWrapper/FeaturedBlogWrapper.component"
+
 export default function Home() {
   const [mobile, setMobile] = useState(undefined)
 
@@ -193,6 +192,7 @@ export default function Home() {
 
         </div>}
       </Section>
+      <FeaturedBlogWrapper/>
     </div>
   )
 }

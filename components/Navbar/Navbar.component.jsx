@@ -1,12 +1,8 @@
 import styles from "./Navbar.module.scss";
 import { useSession } from "next-auth/react";
 import Link from 'next/link'
-import Image from 'next/image'
-import { signOut } from "next-auth/react";
-import proficeUserDefaut from "../../public/profileUserDefault.png"
 import { useRef } from "react";
 import { useOutsideAlerter } from "../../lib/customHooks";
-import TranquilityButton from "../TranquilityButton/TranquilityButton.component";
 export default function Navbar() {
     // const user = null;
     const userOptionsRef = useRef();
@@ -57,22 +53,6 @@ export default function Navbar() {
                     </li>
                     <li></li>
                 </ul>
-            </div>
-            <div ref={profileRef} className={styles.profilePicContainer}>
-                    <div style={{ "cursor": "pointer" }} onClick={handleProfileClick} className={styles.profilePic}  >
-                        <Image src={proficeUserDefaut} alt={session ? session.user.name : "Login First"} srcSet="" />
-                    </div>
-                    <ul ref={userOptionsRef} className={`${styles.userOptions} ${styles.toggleOpacity}`}>
-                        {session && <>
-                            <li onClick={makeUserdropDownVanish}>Create New Post</li>
-                            <li onClick={makeUserdropDownVanish}>Preferences</li>
-                            <li onClick={makeUserdropDownVanish}>View profile</li>
-                            <TranquilityButton className={styles.button} onClick={() => { signOut(); makeUserdropDownVanish() }} >Sign out</TranquilityButton></>}
-                        {!session &&
-                            <div onClick={makeUserdropDownVanish}   >
-                                <Link href="/enter" >Login</Link>
-                            </div>}
-                    </ul>
             </div>
         </nav>
     )
