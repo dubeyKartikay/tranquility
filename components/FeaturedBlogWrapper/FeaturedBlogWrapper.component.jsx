@@ -1,7 +1,8 @@
+import { useState } from "react"
+import FeaturedBlog from "../FeaturedBlog/FeaturedBlog.component";
 
-export default function FeaturedBlogWrapper() {
-    let blog = fetch("https://raw.githubusercontent.com/dubeyKartikay/blog/master/Trending/Test.md")
+export default function FeaturedBlogWrapper({content}) {
   return (
-    <div>{blog}</div>
+    <div></div>
   )
 }
