@@ -6,3 +6,5 @@ export default function FeaturedBlogWrapper({content}) {
     <div></div>
   )
 }
+
+
