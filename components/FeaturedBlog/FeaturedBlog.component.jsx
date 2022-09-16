@@ -10,6 +10,7 @@ export default function FeaturedBlog({ image, date, heading, readingTime, subTex
   const [mobile, setMobile] = useState(undefined)
   color = color ? color :  "#d9d9d9"
   bgImg = bgImg ? bgImg :backgroundBlogPostImg
+  console.log(image, date, heading, readingTime, subText,writer,color,bgImg);
   useEffect(() => {
     const updateMobile = () => {
       setMobile(window.innerWidth < Number(scssVars.screenSmall.slice(0, -2)) ? true : false)

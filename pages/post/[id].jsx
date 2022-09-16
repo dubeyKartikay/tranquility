@@ -46,7 +46,7 @@ export async function getStaticProps(context){
   let collection  = conn.db("Blogs").collection("Trending")
   const dataBlog = await collection.findOne({id:id});
   const { image, date, heading, readingTime, subText, writer,content:contentLink} = dataBlog;
-  console.log(dataBlog);
+  // console.log(dataBlog);
   let res = await fetch(contentLink);
   let content = await res.text();
   return{
